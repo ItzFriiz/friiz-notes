@@ -1,0 +1,4 @@
+interface:
+  display_name: "Friiz Notes"
+  short_description: "按通用与课程项目专用规范，整理可独立学习、应试和查阅的中文纲要笔记"
+  default_prompt: "使用 $friiz-notes，读取当前课程或项目的笔记规范，将材料整理成可独立读懂的 Obsidian 笔记。"
