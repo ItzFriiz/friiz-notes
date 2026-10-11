@@ -59,13 +59,7 @@ For a full chapter, the default workflow is material extraction → main-agent w
 
 ### Adaptive explanations and a learner model
 
-The [maintenance guide](references/learner-model-guide.md) and [sanitized examples](references/learner-model.md) show how reading feedback can guide the choice to expand a step, define an operation, compare formulas, or remove repetition. The examples are not a profile of the current user.
-
-Each actual record should state an observation, its feedback evidence, its scope, and a concrete writing decision. After reviewing a note, explicitly ask the agent to update the model. Merge repeated entries and revise conclusions when new evidence contradicts them. Silence is not confirmation of understanding. Both the writer and independent reviewer read the actual model; keep topic-specific knowledge in private local rules.
-
-For a public installation, keep personal records in the ignored `references/learner-model.local.md`. To version the full personal skill and move it between devices, use one local repository with `private` and `public` branches, each connected to its own remote repository. GitHub visibility applies to a whole repository, so private and public remotes must remain separate. Install the complete `private` branch at `~/.codex/skills/friiz-notes`; place the `public` branch in a worktree outside the skills directory, for example at `~/.codex/public/friiz-notes`. A worktree is another working directory for a branch of the same repository. Configure the private entry point and review rules to read its tracked actual model. On a new device, restore both branches and the worktree; point shared hooks to an absolute path so both working directories run them.
-
-Apply general rule changes to both branches while preserving their different entry points and learner models. Copy only publishable changes or cherry-pick commits containing general rules alone; do not merge the complete private branch. Review public content and outgoing history before pushing each branch to its designated remote. A branch named “private” does not make commits confidential. Keep personal transcripts, research details, and identifying paths private.
+The [learner model](references/learner-model.md) guides whether to define a term, explain an operation, fill a reasoning step, compare formulas, or remove repetition. The writer and independent reviewer read it with the current topic's `NOTE_RULES.md`; current feedback and knowledge already established in the note take priority over older records. The model is updated only when explicitly requested after review.
 
 ### Repository structure
 
@@ -79,8 +73,7 @@ friiz-notes/
 │   ├── course-notes.md            # Course materials and assessment evidence
 │   ├── research-notes.md          # Research scope, filing, and citations
 │   ├── topic-rules.md             # Local NOTE_RULES.md maintenance
-│   ├── learner-model-guide.md     # Actual profile maintenance and private storage
-│   └── learner-model.md           # Sanitized examples only
+│   └── learner-model.md           # Reading preferences and explanation decisions
 ├── README.md
 └── LICENSE
 ```
@@ -88,8 +81,6 @@ friiz-notes/
 ### Contributing
 
 Issues and pull requests are welcome. Describe the reading or workflow problem, include a short shareable example when useful, and explain the proposed change. Keep general rules in the skill and personal project differences in local rules. Preserve cognitive order, source accuracy, and user edits; check related references when moving a rule.
-
-Review the public checkout before committing or publishing when requested. Keep private installation changes on the private branch and push them only to its private remote. Personal notes, transcripts, credentials, and generated working files do not belong in this public repository.
 
 ### License
 
@@ -134,13 +125,7 @@ git clone https://github.com/ItzFriiz/friiz-notes.git ~/.codex/skills/friiz-note
 
 ### 用认知文档调整解释深度
 
-[维护指南](references/learner-model-guide.md) 和 [脱敏示例](references/learner-model.md) 展示如何根据阅读反馈决定补推理、解释操作、并列公式或删除重复说明。示例不代表当前使用者的知识基础。
-
-每条实际记录写清观察、反馈依据、适用范围和下一次写作决策。审查完笔记后，明确要求 agent 更新认知文档；合并重复条目，依据新反馈修正旧结论，不把没有异议当作已经理解。写作者和独立审查者读取实际记录，特定主题的知识基础放私有的当地规范。
-
-使用公共安装版时，个人记录放被 Git 忽略的 `references/learner-model.local.md`。如果需要版本历史和跨设备迁移，可以用一个本地仓库的 `private`、`public` 两分支，分别连接私有与公开远端仓库。GitHub 按整个仓库设置可见性，因此远端仍需分开。完整 `private` 分支安装到 `~/.codex/skills/friiz-notes`，`public` 分支以 worktree 放在 `skills` 之外，例如 `~/.codex/public/friiz-notes`。worktree 是同一仓库另一分支的工作目录。私人版入口与审查规则明确读取实际认知记录；新设备恢复两分支及 worktree，并以绝对路径配置共享推送钩子。
-
-修改通用规则时同步两分支，保留各自的入口和认知文档；只移植可公开改动，或 cherry-pick 仅含通用规则的提交，不合并完整私人分支。提交时检查公开内容及待推送历史，分别推送到对应远端。名为“private”的分支不使提交保密。个人对话、研究细节与可识别路径留在私人仓库。
+[认知文档](references/learner-model.md) 用于决定是否定义术语、说明操作、补推理、并列公式或删除重复解释。写作者和独立审查者结合当前主题的 `NOTE_RULES.md` 读取它，当前反馈和正文已建立的知识优先于旧记录。审查后仅在明确要求时更新认知记录。
 
 ### 仓库结构
 
@@ -149,8 +134,6 @@ git clone https://github.com/ItzFriiz/friiz-notes.git ~/.codex/skills/friiz-note
 ### 参与贡献与维护
 
 欢迎提交 issue 或 pull request。请说明遇到的阅读或工作流问题，必要时提供可公开的短例子，并解释改动。通用规则留在 skill，个人项目差异放当地规范；修改时保留认知顺序、来源准确性和用户删改，移动规则时同步检查相关引用。
-
-提交或发布前检查公开维护目录；私人安装版的改动只提交到私人分支并推送到私有远端。个人笔记、录音稿、凭据和生成的工作文件不放入这个公开仓库。
 
 ### 许可证
 

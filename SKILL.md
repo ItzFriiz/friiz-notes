@@ -8,7 +8,7 @@ description: 为 Friiz 创建、整合和更新可独立读懂的课程、主题
 ## 读取与路由
 
 - 使用当前任务和适用的 `AGENTS.md`。确定输出位置后，读取目标目录到课程／项目根目录之间的 `NOTE_RULES.md`；具体规范覆盖通用默认值，不遍历其他项目。
-- 写作与审查前按 [认知文档维护方法](references/learner-model-guide.md) 读取实际认知记录，结合当前主题规范判断知识基础和有效讲法；公开的脱敏示例不能当作当前用户的特征。仅在用户明确要求更新认知文档时修订实际记录。
+- 写作与审查前读取 [理解与阅读偏好](references/learner-model.md)，结合当前主题规范判断知识基础和有效讲法；当前明确反馈优先于已有记录。仅在用户明确要求更新认知文档时修订记录。
 - 课程与应试任务读 [课程笔记](references/course-notes.md)，科研与主题检索读 [科研笔记](references/research-notes.md)。完整笔记的默认骨架与排版按 [Obsidian 规范](references/obsidian.md)。
 - 整章或多材料整理读 [材料处理与自查](references/workflow.md)，采用 Luna 处理材料、主 agent 写作、独立子 agent 审查的流程。局部修改由主 agent 直接处理，按影响范围复查。
 - 首次处理主题或更新长期约定时，按 [专用规范维护](references/topic-rules.md) 建立或更新规则；没有实际差异不另建规范文件。

@@ -9,5 +9,3 @@ tmp/
 *.fls
 *.log
 *.synctex.gz
-
-references/learner-model.local.md
