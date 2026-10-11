@@ -63,9 +63,9 @@ The [maintenance guide](references/learner-model-guide.md) and [sanitized exampl
 
 Each actual record should state an observation, its feedback evidence, its scope, and a concrete writing decision. After reviewing a note, explicitly ask the agent to update the model. Merge repeated entries and revise conclusions when new evidence contradicts them. Silence is not confirmation of understanding. Both the writer and independent reviewer read the actual model; keep topic-specific knowledge in private local rules.
 
-For a public installation, keep personal records in the ignored `references/learner-model.local.md`. To version the full personal skill and move it between devices, maintain a separate private repository with a private remote. Install that complete private version at `~/.codex/skills/friiz-notes`; keep the public maintenance checkout outside the skills directory, for example at `~/.codex/public/friiz-notes`. Configure the private entry point and review rules to read its tracked actual model. Clone the private version on a new device and restore any local Git hook configuration as described in that repository.
+For a public installation, keep personal records in the ignored `references/learner-model.local.md`. To version the full personal skill and move it between devices, use one local repository with `private` and `public` branches, each connected to its own remote repository. GitHub visibility applies to a whole repository, so private and public remotes must remain separate. Install the complete `private` branch at `~/.codex/skills/friiz-notes`; place the `public` branch in a worktree outside the skills directory, for example at `~/.codex/public/friiz-notes`. A worktree is another working directory for a branch of the same repository. Configure the private entry point and review rules to read its tracked actual model. On a new device, restore both branches and the worktree; point shared hooks to an absolute path so both working directories run them.
 
-Keep the histories separate. A branch named “private” does not make commits confidential. Publish only separately reviewed and authorized general rules or sanitized examples; do not merge private commits or synchronize the entire private directory into the public repository. Keep personal transcripts, research details, and identifying paths private.
+Apply general rule changes to both branches while preserving their different entry points and learner models. Copy only publishable changes or cherry-pick commits containing general rules alone; do not merge the complete private branch. Review public content and outgoing history before pushing each branch to its designated remote. A branch named “private” does not make commits confidential. Keep personal transcripts, research details, and identifying paths private.
 
 ### Repository structure
 
@@ -89,7 +89,7 @@ friiz-notes/
 
 Issues and pull requests are welcome. Describe the reading or workflow problem, include a short shareable example when useful, and explain the proposed change. Keep general rules in the skill and personal project differences in local rules. Preserve cognitive order, source accuracy, and user edits; check related references when moving a rule.
 
-Review the public checkout before committing or publishing when requested. Keep private installation changes in its separate private repository. Personal notes, transcripts, credentials, and generated working files do not belong in this public repository.
+Review the public checkout before committing or publishing when requested. Keep private installation changes on the private branch and push them only to its private remote. Personal notes, transcripts, credentials, and generated working files do not belong in this public repository.
 
 ### License
 
@@ -138,9 +138,9 @@ git clone https://github.com/ItzFriiz/friiz-notes.git ~/.codex/skills/friiz-note
 
 每条实际记录写清观察、反馈依据、适用范围和下一次写作决策。审查完笔记后，明确要求 agent 更新认知文档；合并重复条目，依据新反馈修正旧结论，不把没有异议当作已经理解。写作者和独立审查者读取实际记录，特定主题的知识基础放私有的当地规范。
 
-使用公共安装版时，个人记录放被 Git 忽略的 `references/learner-model.local.md`。如果需要版本历史和跨设备迁移，另建具有私有远端的独立仓库，维护完整私人安装版：私人版安装到 `~/.codex/skills/friiz-notes`，公开维护目录放在 `skills` 之外，例如 `~/.codex/public/friiz-notes`。私人版的入口和审查规则明确读取纳入版本控制的实际认知文档；新设备克隆私人版，并按其说明恢复本地 Git 钩子配置。
+使用公共安装版时，个人记录放被 Git 忽略的 `references/learner-model.local.md`。如果需要版本历史和跨设备迁移，可以用一个本地仓库的 `private`、`public` 两分支，分别连接私有与公开远端仓库。GitHub 按整个仓库设置可见性，因此远端仍需分开。完整 `private` 分支安装到 `~/.codex/skills/friiz-notes`，`public` 分支以 worktree 放在 `skills` 之外，例如 `~/.codex/public/friiz-notes`。worktree 是同一仓库另一分支的工作目录。私人版入口与审查规则明确读取实际认知记录；新设备恢复两分支及 worktree，并以绝对路径配置共享推送钩子。
 
-两个仓库分别维护。名为“private”的分支不使提交保密。公开时只发布单独审查并获授权的通用规则或脱敏例子，不合并私人提交，不把整个私人目录同步到公开仓库。个人对话、研究细节与可识别路径留在私人仓库。
+修改通用规则时同步两分支，保留各自的入口和认知文档；只移植可公开改动，或 cherry-pick 仅含通用规则的提交，不合并完整私人分支。提交时检查公开内容及待推送历史，分别推送到对应远端。名为“private”的分支不使提交保密。个人对话、研究细节与可识别路径留在私人仓库。
 
 ### 仓库结构
 
@@ -150,7 +150,7 @@ git clone https://github.com/ItzFriiz/friiz-notes.git ~/.codex/skills/friiz-note
 
 欢迎提交 issue 或 pull request。请说明遇到的阅读或工作流问题，必要时提供可公开的短例子，并解释改动。通用规则留在 skill，个人项目差异放当地规范；修改时保留认知顺序、来源准确性和用户删改，移动规则时同步检查相关引用。
 
-提交或发布前检查公开维护目录；私人安装版的改动提交到其独立私有仓库。个人笔记、录音稿、凭据和生成的工作文件不放入这个公开仓库。
+提交或发布前检查公开维护目录；私人安装版的改动只提交到私人分支并推送到私有远端。个人笔记、录音稿、凭据和生成的工作文件不放入这个公开仓库。
 
 ### 许可证
 
