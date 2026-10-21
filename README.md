@@ -4,7 +4,7 @@
 
 ## English
 
-A Codex skill for turning course materials, transcripts, papers, and research notes into Markdown notes that can be understood on their own. It emphasizes the reader's learning sequence, defined notation, complete derivations, accurate sources, and explanations matched to the reader's needs.
+A Pi skill for turning course materials, transcripts, papers, and research notes into Markdown notes that can be understood on their own. It emphasizes the reader's learning sequence, defined notation, complete derivations, accurate sources, and explanations matched to the reader's needs.
 
 The instructions were developed through Friiz's study workflow. The skill files are primarily in Chinese; the requested output language can be changed for a task.
 
@@ -47,13 +47,13 @@ Supply your own course and research materials. Keep local course requirements an
 
 ### Installation and use
 
-For Codex, clone into a new skill directory:
+For Pi, clone into a new skill directory:
 
 ```sh
-git clone https://github.com/ItzFriiz/friiz-notes.git ~/.codex/skills/friiz-notes
+git clone https://github.com/ItzFriiz/friiz-notes.git ~/.pi/agent/skills/friiz-notes
 ```
 
-Adapt the conventions above, then invoke `$friiz-notes` with the relevant materials and output location. See the [Codex skills documentation](https://developers.openai.com/codex/skills/) for platform-specific setup.
+Adapt the conventions above, then invoke `/skill:friiz-notes` with the relevant materials and output location. See the [Pi skills documentation](https://github.com/earendil-works/pi/blob/main/docs/skills.md) for platform-specific setup.
 
 For a full chapter, the default workflow is material extraction → main-agent writing → independent review → main-agent revision. Small edits stay with the main agent. Review prioritizes cognitive order: concepts appear when needed, their purpose is clear, and derivations follow the question being answered. Explanations expand difficult steps without restating substitutions already clear from the formulas.
 
@@ -88,7 +88,7 @@ Issues and pull requests are welcome. Describe the reading or workflow problem, 
 
 ## 中文
 
-这是一个 Codex skill，用于把课程材料、录音转录、论文和科研记录整理成可独立读懂的 Markdown 笔记。重点是符合读者的认知顺序、解释必要符号、保留完整推导和可靠来源，并根据读者的理解调整解释深度。
+这是一个 Pi skill，用于把课程材料、录音转录、论文和科研记录整理成可独立读懂的 Markdown 笔记。重点是符合读者的认知顺序、解释必要符号、保留完整推导和可靠来源，并根据读者的理解调整解释深度。
 
 这些规范来自 Friiz 的实际学习流程。skill 文件主要使用中文，任务中可以指定其他输出语言。
 
@@ -113,13 +113,13 @@ Study 的参考目录结构见上方英文部分。课程和科研材料由使�
 
 ### 安装与使用
 
-在 Codex 的新 skill 目录中克隆：
+在 Pi 的新 skill 目录中克隆：
 
 ```sh
-git clone https://github.com/ItzFriiz/friiz-notes.git ~/.codex/skills/friiz-notes
+git clone https://github.com/ItzFriiz/friiz-notes.git ~/.pi/agent/skills/friiz-notes
 ```
 
-调整上述约定后，使用 `$friiz-notes`，并提供相关材料和输出位置。平台设置参考 [Codex skills 文档](https://developers.openai.com/codex/skills/)。
+调整上述约定后，使用 `/skill:friiz-notes`，并提供相关材料和输出位置。平台设置参考 [Pi skills 文档](https://github.com/earendil-works/pi/blob/main/docs/skills.md)。
 
 整章笔记默认按“材料提取 → 主 agent 写作 → 独立审查 → 主 agent 修改”推进，局部修改由主 agent 直接处理。审查首先看认知顺序：概念在需要时出现、用途及时交代，推导围绕当前问题展开。费解的地方展开解释，公式已经说明的代入不再复述。
 
