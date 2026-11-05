@@ -20,7 +20,7 @@ This skill is specialized for Friiz's Obsidian vault, **Study**, and personal pr
 | Shared research notes | `/Users/friiz/Personal/Study/project/notes` | `references/research-notes.md` |
 | Project notes | A project's own `notes/` directory | `references/research-notes.md` |
 | Diagram rendering | TeX Live and LuaLaTeX produce white-background PNGs with English labels; images are visually checked before use | `references/obsidian.md` |
-| Agent workflow | Luna extracts and compresses materials; the main agent writes and revises; an independent agent reviews | `references/workflow.md` |
+| Agent workflow | `new-api/deepseek-flash` extracts and compresses materials; the main agent writes and revises; an independent agent reviews | `references/workflow.md` |
 | Personal preferences | The name Friiz, Chinese prose, explanation depth, and permission to maintain personal rules | `SKILL.md` and `references/topic-rules.md` |
 
 Replace absolute paths, personal names, model choices, and permission conventions with your own. Check that internal links resolve within your vault. The separate `stop-slop` skill is used for editing prose: install it if following the instructions as written, or replace that reference with your own editing guidance.
@@ -104,7 +104,7 @@ Issues and pull requests are welcome. Describe the reading or workflow problem, 
 | 通用科研笔记 | `/Users/friiz/Personal/Study/project/notes` | `references/research-notes.md` |
 | 项目笔记 | 各项目自身的 `notes/` 目录 | `references/research-notes.md` |
 | 绘图环境 | TeX Live／LuaLaTeX 输出白底 PNG，图中文字默认英文，插入前目视检查 | `references/obsidian.md` |
-| Agent 分工 | Luna 提取压缩材料，主 agent 写作修改，独立 agent 审查 | `references/workflow.md` |
+| Agent 分工 | `new-api/deepseek-flash` 提取压缩材料，主 agent 写作修改，独立 agent 审查 | `references/workflow.md` |
 | 个人偏好 | Friiz 称呼、中文行文、解释深度和维护个人规则的授权 | `SKILL.md` 和 `references/topic-rules.md` |
 
 请替换绝对路径、个人称呼、模型选择和授权约定，并确认库内链接适用于你的 Obsidian 仓库。行文编辑依赖单独的 `stop-slop` skill；沿用原流程时需安装它，也可以替换为自己的编辑规范。
